@@ -1,6 +1,6 @@
 name             'grafana'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Fewbytes'
+maintainer_email 'daniel@fewbytes.com'
 license          'All rights reserved'
 description      'Installs/Configures grafana'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

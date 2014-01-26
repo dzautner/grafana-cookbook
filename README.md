@@ -16,6 +16,7 @@ Attributes
 - `default['grafana']['repo']` - repository to checkout from, default: "https://github.com/torkelo/grafana.git"
 - `default['grafana']['elasticsearch_url']` - elasticserach url. there is a possiblity to use js as well. default: '"http://"+window.location.hostname+":9200"'
 - `default['grafana']['graphite_url']` - graphite url. there is a possiblity to use js as well. '"http://"+window.location.hostname+":8080"'
+- `default['grafana']['port']` - port the web server will listen to. defaults to 80.
 e.g.
 
 Usage

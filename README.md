@@ -1,68 +1,27 @@
 grafana Cookbook
 ================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+Installs [Grafana](https://github.com/torkelo/grafana) with nginx or apache backend.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - grafana needs toaster to brown your bagel.
+#### cookbooks
+- [git](https://github.com/opscode-cookbooks/git) - [apache](https://github.com/opscode-cookbooks/apache2) - [nginx](https://github.com/opscode-cookbooks/nginx)
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
-
+- default['grafana']['revision'] - the revision to install, default: 58dbb01e76f4412ee150e86587296de0bb83aba9
+- default['grafana']['install_dir'] - installation directory, default: "/opt/grafana"
+- default['grafana']['repo'] - repository to checkout from, default: "https://github.com/torkelo/grafana.git"
+- default['grafana']['elasticsearch_url'] - elasticserach url. there is a possiblity to use js as well. default: '"http://"+window.location.hostname+":9200"'
+- default['grafana']['graphite_url'] - graphite url. there is a possiblity to use js as well. '"http://"+window.location.hostname+":8080"'
 e.g.
-#### grafana::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['grafana']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
 
 Usage
 -----
-#### grafana::default
-TODO: Write usage instructions for each cookbook.
+First include grafana::default which clones the grafana repository from github and changes the configuration based on the given attributes. 
+Then you could ether include grafana::nginx or grafana::apache to install a server. Feel free to only include the default recipe and use any other server/cookbook.
 
-e.g.
-Just include `grafana` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[grafana]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Fewbytes

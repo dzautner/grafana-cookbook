@@ -1,4 +1,4 @@
-default['grafana']['revision'] = "HEAD"
+default['grafana']['revision'] = "58dbb01e76f4412ee150e86587296de0bb83aba9"
 default['grafana']['server'] = "apache"
 default['grafana']['install_dir'] = "/opt/grafana"
 default['grafana']['repo'] = "https://github.com/torkelo/grafana.git"

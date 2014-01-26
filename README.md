@@ -5,7 +5,9 @@ Installs [Grafana](https://github.com/torkelo/grafana) with nginx or apache back
 Requirements
 ------------
 #### cookbooks
-- [git](https://github.com/opscode-cookbooks/git) - [apache](https://github.com/opscode-cookbooks/apache2) - [nginx](https://github.com/opscode-cookbooks/nginx)
+- [git](https://github.com/opscode-cookbooks/git) 
+- [apache](https://github.com/opscode-cookbooks/apache2) 
+- [nginx](https://github.com/opscode-cookbooks/nginx)
 
 Attributes
 ----------

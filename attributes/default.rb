@@ -9,3 +9,4 @@ default['grafana']['datasources'] = {
 	'graphite' => { 'type' => 'graphite', 'url' => '"http://"+window.location.hostname+":8080"', 'default' => 'true'},
 }
 default['grafana']['port'] = "80"
+default['grafana']['nginx']['install_recipe'] = 'source'

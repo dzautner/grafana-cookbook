@@ -1,5 +1,5 @@
 include_recipe "grafana::default"
-include_recipe "nginx::source"
+include_recipe "nginx::#{node['grafana']['nginx']['install_recipe']}"
 
 case node['grafana']['install_flavour']
 when 'release'   
@@ -18,4 +18,11 @@ template "#{node['nginx']['dir']}/sites-available/grafana.conf" do
   })
 end
 
+file "/etc/nginx/conf.d/default.conf" do
+	action :delete
+end
+
+nginx_site 'default' do
+  enable false
+end
 nginx_site "grafana.conf"

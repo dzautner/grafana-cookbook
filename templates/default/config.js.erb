@@ -20,9 +20,7 @@ function (Settings) {
         username: <%= options['username'] %>,
         password: <%= options['password'] %>,
         <% end %>
-        <% if options.has_key?('default') %>
-        default: options['default']
-        <% end %>
+        default: <%= options['default'] || 'false' %>
       },
       <% end %>
     },

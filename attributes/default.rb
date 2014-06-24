@@ -1,5 +1,5 @@
 default['grafana']['install_flavour']= 'release'
-default['grafana']['release_version']= '1.6.0'
+default['grafana']['release_version']= '1.6.1'
 default['grafana']['revision'] = "810f46c450c9582de763395c2edc4f209abc3632"
 default['grafana']['reference'] = "master"
 default['grafana']['install_dir'] = "/opt/grafana"

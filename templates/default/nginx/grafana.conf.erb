@@ -2,7 +2,7 @@ server {
         listen       <%= node['grafana']['port'] %> 	default;
 
         location / {
-            root   <%= @install_dir %>/src;
+            root   <%= @install_dir %>;
             index  index.html index.htm;
         }
 }
